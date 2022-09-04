@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><b>Digite o nome do aluno que deseja calcular a média: </b><input type="text" id="nome"></h1>
+        <h2>Nota 1: <input type="number" id="n1"></h2>
+        <h2>Nota 2: <input type="number" id="n2"></h2>
+        <button onclick="abrirAlerta()">Calcular</button>
+    </div>
+
+    <script>
+        function abrirAlerta(){
+            
+            const nome = document.querySelector("#nome");
+            const valNome = nome.value;
+            var n1 = parseInt(document.getElementById("n1").value);
+            var n2 = parseInt(document.getElementById("n2").value);
+            var media = ((n1 + n2) / 2);
+            var texto = "";
+
+            texto = "A media do aluno " + valNome + " foi " + media;
+            alert(texto);
+        }
+    </script>
+</body>
+</html>
